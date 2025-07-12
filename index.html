@@ -207,20 +207,31 @@
             </div>
 
             <div class="contact-box autoBlur">
-            <form action="https://formsubmit.co/sudeepsigdel123@gmail.com" method="POST" class="contact-box autoBlur">
-                <p>Wheter you're looking to build a new website, improve your existing platform, or bring a unique project to file. i'm here to help.</p>
-            
-                <p>Full Name</p>
-                <input placeholder="Your Full name" type="text">
+<form action="https://formsubmit.co/sudeepsigdel123@gmail.com" method="POST" class="contact-box autoBlur">
+  
+  <!-- Spam protection honeypot (hidden from bots) -->
+  <input type="text" name="_honey" style="display:none">
+  
+  <!-- Disable CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
 
-                <p>Email Address</p>
-                <input placeholder="Your Email" type="email">
+  <!-- Redirect after submission (optional) -->
+  <input type="hidden" name="_next" value="https://sudeepsigdel.com.np/thank-you.html">
 
-                <p>Your Message</p>
-                <input  class="input-message" type="text" placeholder="shaire your thoughts..." id="message">
+  <p>Whether you're looking to build a new website, improve your existing platform, or bring a unique project to life — I'm here to help.</p>
 
-                <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
-            </form>
+  <p>Full Name</p>
+  <input name="name" type="text" placeholder="Your Full Name" required>
+
+  <p>Email Address</p>
+  <input name="email" type="email" placeholder="Your Email" required>
+
+  <p>Your Message</p>
+  <textarea name="message" class="input-message" placeholder="Share your thoughts..." required></textarea>
+
+  <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
+</form>
+
             </div>
         
         </section> 
