@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sudeepsigdel.com/sitemap.xml
+Sitemap: https://sudeepsigdel.com.np/sitemap.xml
