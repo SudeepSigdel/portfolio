@@ -114,3 +114,150 @@ body{
         opacity: 1;
     }
 }
+
+#aboutme{
+    background-color: transparent;
+    border-style:groove;
+    border-radius:5%;
+    border-color:#000;
+    color:#000;
+    cursor:pointer;
+    padding: 10px 20px;
+    font-family: "Sora", system-ui, sans-serif;
+    font-size:1rem;
+    transition: all 0.3s ease;
+}
+
+.blink-cursor{
+    font-family: "Courier New", monospace;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink{
+    50%{ opacity: 0; }
+}
+
+.terminal-hint{
+    margin: 6px 0 0 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.7rem;
+    color: #8a8f98;
+    text-align: center;
+}
+
+.terminal-overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.terminal-overlay.open{
+    display: flex;
+}
+
+.terminal-window{
+    width: 100%;
+    max-width: 640px;
+    height: min(70vh, 520px);
+    background-color: #0d0f10;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: zoomIn 0.2s ease backwards;
+}
+
+.terminal-titlebar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background-color: #1c1e1f;
+    border-bottom: 1px solid #000;
+}
+
+.terminal-dot{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dot.red{ background-color: #ff5f56; }
+.terminal-dot.yellow{ background-color: #ffbd2e; }
+.terminal-dot.green{ background-color: #27c93f; }
+
+.terminal-titletext{
+    margin-left: 6px;
+    color: #8a8f98;
+    font-family: "Courier New", monospace;
+    font-size: 0.8rem;
+}
+
+.terminal-close{
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #8a8f98;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.terminal-close:hover{
+    color: #fff;
+}
+
+.terminal-body{
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 16px;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    color: #3ee66f;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.terminal-line{
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.terminal-line.muted{ color: #8a8f98; }
+.terminal-line.error{ color: #ff6b6b; }
+.terminal-line.system{ color: #6fb8ff; }
+.terminal-line .cmd{ color: #ffbd2e; }
+
+.terminal-inputline{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-top: 1px solid #1c1e1f;
+    font-family: "Courier New", monospace;
+}
+
+.terminal-inputline .prompt{
+    color: #3ee66f;
+    font-size: 0.85rem;
+}
+
+.terminal-inputline input{
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+}

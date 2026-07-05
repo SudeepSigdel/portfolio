@@ -54,7 +54,7 @@
             <span id="name">&nbsp;</span>
         </div>
         <div class="slogan">
-            <p>professionally confused but optimistic!</p>
+            <p>backend engineer based in Nepal</p>
         </div>
         <div class="what-I-do">
             <p>i make APIs that make or break systems</p>
@@ -71,7 +71,30 @@
                 <img src="public/assets/linkedin-icon.svg" alt="LinkedIn">
             </a>
         </div>
+        <button id="aboutme" onclick="openTerminal()">
+            About Me <span class="blink-cursor">_</span>
+        </button>
+        <p class="terminal-hint">opens a live API terminal</p>
     </div>
+
+    <div class="terminal-overlay" id="terminalOverlay" aria-hidden="true">
+        <div class="terminal-window" role="dialog" aria-modal="true" aria-label="Live API terminal">
+            <div class="terminal-titlebar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-titletext">sudeep@api:~</span>
+                <button class="terminal-close" id="terminalClose" aria-label="Close terminal">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminalBody"></div>
+            <div class="terminal-inputline">
+                <span class="prompt">sudeep@api:~$</span>
+                <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+            </div>
+        </div>
+    </div>
+
+    <script src="terminal.js"></script>
 </body>
 
 </html>
