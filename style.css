@@ -115,6 +115,12 @@ body{
     }
 }
 
+.action-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #aboutme{
     background-color: transparent;
     border-style:groove;
@@ -126,6 +132,28 @@ body{
     font-family: "Sora", system-ui, sans-serif;
     font-size:1rem;
     transition: all 0.3s ease;
+}
+
+#resume-link{
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border-style: groove;
+    border-width: 1px;
+    border-radius: 5%;
+    border-color: #000;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#resume-link:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 .blink-cursor{
